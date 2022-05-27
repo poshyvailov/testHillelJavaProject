@@ -117,7 +117,10 @@ public class Lesson2 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please type your mark to convert it ");
+
+
         int userMark = scanner.nextInt();
+
 
         if (userMark <= 0 || userMark > 12) {
             System.out.println("Use values from 1 to 12! ");
