@@ -35,7 +35,6 @@ public class Lesson2 {
 //        }
 
 
-        
         //CASE for several events with different bodies for each case
 
 //        Scanner scanner = new Scanner(System.in);
@@ -113,7 +112,6 @@ public class Lesson2 {
 //            }
 
 
-
         //CASE for several events with one body
 
         Scanner scanner = new Scanner(System.in);
@@ -157,7 +155,11 @@ public class Lesson2 {
                     System.out.println("Wrong value! ");
                 }
             }
-    }
 
+        //anotherOperatorLikeIf
+        int userAge = 20;
+        String if_userShouldHAveAccess = userAge >= 18 && userAge < 100 ? "Welcome" : "Wrong age, access denied";
+        System.out.println(if_userShouldHAveAccess);
+    }
 
 }
