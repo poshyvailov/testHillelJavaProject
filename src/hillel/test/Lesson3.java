@@ -57,7 +57,6 @@ public class Lesson3 {
 //        } while (count < 100);
 
 
-
 //        //for
 //        for (int a = 0; a <= 10; a++){
 //            System.out.println("int a = " + a);
@@ -71,15 +70,14 @@ public class Lesson3 {
         // Факторил не может быть негативным
 
 
-
-        //Will generate random number from 0 to 1 DOUBLE
-        System.out.println(Math.random());
-        //Если мы хотим его преобразать к целому
-        System.out.println(Math.random() * 10);
-
-        //приобразовуем в целое int
-        int randomNumber = (int) (Math.random() * 10);
-        System.out.println(randomNumber);
+//        //Will generate random number from 0 to 1 DOUBLE
+//        System.out.println(Math.random());
+//        //Если мы хотим его преобразать к целому
+//        System.out.println(Math.random() * 10);
+//
+//        //приобразовуем в целое int
+//        int randomNumber = (int) (Math.random() * 10);
+//        System.out.println(randomNumber);
 
 
 //        int factorial = 5;
@@ -91,18 +89,34 @@ public class Lesson3 {
 //        }
 //        System.out.println("Final factorial result is: " + fResult);
 
-        
-        //Усложняем вычисление факториала рандомным числом
-        int factorial = (int)(Math.random() * 10);
-        System.out.println(factorial);
-        int fResult2 = 1;
 
-        for (int i = 1; i <= factorial; i++){
-            fResult2 *= i;
-            System.out.println("Current factorial is: " + fResult2);
+//        //Усложняем вычисление факториала рандомным числом
+//        int factorial = (int)(Math.random() * 10);
+//        System.out.println(factorial);
+//        int fResult2 = 1;
+//
+//        for (int i = 1; i <= factorial; i++){
+//            fResult2 *= i;
+//            System.out.println("Current factorial is: " + fResult2);
+//        }
+//        System.out.println("Final factorial is: " + fResult2);
+
+
+        // break and continue
+        Scanner scan = new Scanner(System.in);
+
+        for (int a = 0; a < 1; a++) {
+            System.out.println("Do you waasnt to continue? Y/N");
+            String userAnswer = scan.nextLine();
+
+            if (userAnswer.equals("N")) {
+                System.out.println("Bye! ");
+                break;
+            } else if (userAnswer.equals("Y")) {
+                System.out.println("Thanks for staying with us! ");
+            }
         }
-        System.out.println("Final factorial is: " + fResult2);
 
 
-    }
+}
 }
