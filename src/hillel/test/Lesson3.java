@@ -1,5 +1,6 @@
 package hillel.test;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Lesson3 {
@@ -102,21 +103,130 @@ public class Lesson3 {
 //        System.out.println("Final factorial is: " + fResult2);
 
 
-        // break and continue
-        Scanner scan = new Scanner(System.in);
+//        // break and continue
+//        Scanner scan = new Scanner(System.in);
+//
+//        for (int a = 0; a < 1; a++) {
+//            System.out.println("Do you waasnt to continue? Y/N");
+//            String userAnswer = scan.nextLine();
+//
+//            if (userAnswer.equals("N")) {
+//                System.out.println("Bye! ");
+//                break;
+//            } else if (userAnswer.equals("Y")) {
+//                System.out.println("Thanks for staying with us! ");
+//            }
+//        }
 
-        for (int a = 0; a < 1; a++) {
-            System.out.println("Do you waasnt to continue? Y/N");
-            String userAnswer = scan.nextLine();
 
-            if (userAnswer.equals("N")) {
-                System.out.println("Bye! ");
-                break;
-            } else if (userAnswer.equals("Y")) {
-                System.out.println("Thanks for staying with us! ");
-            }
+//        //Using nested for
+//        for (int i = 1; i <= 10; i++){
+//            for (int j = 1; j <= 10; j++){
+//                System.out.println(i + " * " + j + " = " + i * j);
+//            }
+//        }
+
+//        //Using arrays
+//
+//        int age1 = 19;
+//        int age2 = 22;
+//        int age3 = 23;
+//        int age4 = 33;
+//        System.out.println((age1 + age2 + age3 + age4) / 4);
+//
+//        int[] ages = new int[4];
+//        ages[0] = 19;
+//        ages[1] = 22;
+//        ages[2] = 23;
+//        ages[3] = 33;
+
+
+//        int[] ages = new int[4];
+//
+//        Random random = new Random();
+//        int a = 18;
+//        int b = 90;
+//
+//        for (int i = 0; i < ages.length; i++){
+//            ages[i] = random.nextInt(b - a) ;
+//            System.out.println(ages[i]);
+//        }
+//
+////        System.out.println(50 - 100);
+//
+//        for(int var : ages){
+//            System.out.println(ages[var]);
+//        }
+
+
+        Scanner userInput = new Scanner(System.in);
+        int[] testArray;
+
+        int firstNumber = 50;
+        int secondNumber = 100;
+
+        do {
+            System.out.println("Type size of the array from 1 to 100");
+            testArray = new int[userInput.nextInt()];
+        } while (testArray.length < 1 || testArray.length > 100);
+
+        System.out.println("testArray length is: " + testArray.length);
+
+        Random random = new Random();
+
+        for (int i = 0; i < testArray.length; i++) {
+            testArray[i] = random.nextInt(secondNumber - firstNumber);
+            System.out.println("Test array " + testArray[i]);
         }
 
+        int max = getMax(testArray);
+        System.out.println("Max value in the array is: " + max);
 
-}
+
+        int min = getMin(testArray);
+        System.out.println("Min value in the array is: " + min);
+
+        int average = getAverage(testArray);
+        System.out.println("Average results is: " + average);
+
+    }
+
+    //Ищем максимальное значение
+    public static int getMax(int[] inputArray) {
+        int maxValue = inputArray[0];
+        for (int i = 1; i < inputArray.length; i++) {
+            if (inputArray[i] > maxValue) {
+                maxValue = inputArray[i];
+            }
+        }
+        return maxValue;
+    }
+
+    //Ищем минималаьное значение
+    public static int getMin(int[] inputArray) {
+        int minValue = inputArray[0];
+        for (int j = 1; j < inputArray.length; j++) {
+            if (inputArray[j] < minValue) {
+                minValue = inputArray[j];
+            }
+        }
+        return minValue;
+    }
+
+    //Ищем среднее
+    private static int getAverage(int[] inputArray) {
+        int middle = 0;
+        for (int i = 0; i < inputArray.length; i++) {
+            middle += inputArray[i];
+        }
+        int middleRes = middle / inputArray.length;
+        return middleRes;
+    }
+
+
+    //Обратный перебор - с нуля до последнего элемента
+//        for (int j = testArray.length - 1; j >= 0; j-- ){
+//            System.out.println("Обратный: " + testArray[j]);
+//        }
+
 }
