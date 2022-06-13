@@ -7,7 +7,7 @@ public class Lesson4Methods {
 
     public static void main(String[] args) {
 
-        //перегрузка методов
+//      Перегрузка методов
 //      когда в одном классе есть несколько одинаковых методов но с разным набором параметров
 //      ( мы меняем сигнатуру метода не за счет имени метода, а за счет его параметров ).
 //      К примеру два метода - public static void “user” (String name, int age) и - public static void “user” (String car, int horsePower).
@@ -22,12 +22,12 @@ public class Lesson4Methods {
         String userInput = scan.next();
 
         if (userInput.equals("hands")) {
-            System.out.println("Type right of left hand");
+            System.out.println("Select what hand do you want to wash - right of left ");
             Scanner scanUserHand = new Scanner(System.in);
             String userHand = scanUserHand.nextLine();
             wash(userHand);
         } else if (userInput.equals("car")) {
-            System.out.println("Type your car name ");
+            System.out.println("Please type your car model name ");
             Scanner scanCarName = new Scanner(System.in);
             String userCarName = scanCarName.nextLine();
 
@@ -42,12 +42,10 @@ public class Lesson4Methods {
     }
 
     public static void wash(String userHand) {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("User hand is: " + userHand + " and this hand was washed");
+        System.out.println("You selected " + userHand + " hand and this hand is clean");
     }
 
     public static void wash(String userCar, int horsesPower) {
-        System.out.println("User car is: " + userCar + " and this car is clean now, also this car has " + horsesPower + " horses power");
+        System.out.println("Your car model is: " + userCar + " your car was added to our db and this car is clean now, also this car has " + horsesPower + " horses power and this data was added to our db");
     }
 }
