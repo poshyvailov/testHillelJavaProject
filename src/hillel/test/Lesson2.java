@@ -1,7 +1,7 @@
 package hillel.test;
 
-
 import java.util.Scanner;
+
 
 public class Lesson2 {
 
