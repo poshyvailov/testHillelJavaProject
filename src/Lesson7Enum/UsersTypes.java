@@ -1,6 +1,7 @@
 package Lesson7Enum;
 
 public enum UsersTypes {
+    //Наш Enum класс в котором мы добавили типы пользователей. Дополнительные интовые значения - не обязательные
     ADMIN(0),
     PREMIUM(1),
     AUTHORIZED(2),
