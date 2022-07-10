@@ -16,6 +16,7 @@ public class Main {
         user1.toString();
         checkIfObjectsHaveTheSameDataInside(user1, user2);
 
+
     }
 
     //Пишем метод куда передаем два объекта класса User и вызываем наш переопределенный метод equals. p.s. метод static чтобы можно было его вызывать без создания экземпляра класса
@@ -26,4 +27,5 @@ public class Main {
             System.out.println("Objects are different");
         }
     }
+
 }
