@@ -2,6 +2,11 @@ package Lesson10Interfaces;
 
 public class Cat extends Animal implements Pet {
 
+
+    Cat(String name){
+        super(name);
+    }
+
     public void greets(){
         System.out.println("Cat" + getName() + "says: Meow");
     }
